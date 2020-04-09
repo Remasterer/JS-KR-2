@@ -1,0 +1,131 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: #68696a;
+}
+
+.instruments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  padding: 1rem;
+}
+
+.instruments-buttons, .select {
+  outline: none;
+  position: relative;
+  padding: 0.6rem;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  background-color: #fff;
+  margin-left: 1.5rem;
+}
+
+.instruments-buttons:focus, .select:focus {
+  background-color: red;
+  border-top: 4px solid #000;
+  border-bottom: 4px solid #000;
+}
+
+.instruments-buttons:focus:first-child, .select:focus:first-child {
+  padding-left: 8px;
+  border-left: 4px solid black;
+}
+
+.instruments__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1.5rem;
+}
+
+.instruments__group .instruments-buttons,
+.instruments__group .select {
+  margin-left: 0;
+  border-radius: 0;
+}
+
+.instruments__group .instruments-buttons:first-child,
+.instruments__group .select:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.instruments__group .instruments-buttons:last-child,
+.instruments__group .select:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.options {
+  display: none;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 40px;
+  left: -145px;
+  background-color: #fff;
+  padding: 1rem;
+  width: 180px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.options div {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.options div input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.selector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.selector:checked ~ .options {
+  display: block;
+}
+
+.fa-sort-up {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=style.css.map */
